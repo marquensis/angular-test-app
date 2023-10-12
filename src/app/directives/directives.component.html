@@ -1,0 +1,19 @@
+<h3>Directives</h3>
+<div *ngFor="let item of block;">
+    <ng-container *ngIf="item !== '2'; else elseBlock">
+        Товар: {{ item }}
+    </ng-container>
+    <ng-template #elseBlock>
+        Цифра:  {{item}}
+    </ng-template>
+</div>
+
+<h3>JSON</h3>
+<pre>{{object | json}}</pre>
+
+<h3>Pipe date</h3>
+<p>raw date {{rawDate}}</p>
+<p>date1 {{date1}}</p>
+
+<p>date2 {{rawDate | date:"MM/dd/yy"}}</p>
+<p>date3 {{rawDate | date | uppercase}}</p>
